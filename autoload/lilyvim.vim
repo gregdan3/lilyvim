@@ -32,6 +32,10 @@ endfunction
 
 function! s:CompilePDF(fname)
   " compile LilyPond file as pdf
+  if !filereadable(a:fname)
+    echoerr 'LilyPond file ' . a:fname . ' is not readable. Compile failed.'
+    return
+  endif
   let j = job_start('lilypond --pdf ' . a:fname, {'err_cb': 'LilyVimCompileErrorCB'})
   return j
 endfunction
