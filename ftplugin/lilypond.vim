@@ -8,4 +8,10 @@ if !(has('channel'))
   finish
 endif
 
+if !executable('zathura')
+  echoerr 'Error: zathura is not available on your $PATH.'
+  echom 'Please install the zathura pdf reader to use lilyvim.'
+  finish  " TODO: later lilyvim will do more than just preview
+endif
+
 call lilyvim#LilyVimInit()
