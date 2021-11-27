@@ -37,6 +37,7 @@ function! s:CompilePDF(fname)
     return
   endif
   let j = job_start('lilypond --pdf ' . a:fname, {'err_cb': 'LilyVimCompileErrorCB'})
+  " TODO: check success?
   return j
 endfunction
 
@@ -69,6 +70,7 @@ function! s:StartPreview()
     return
   endif
   let j = job_start('zathura ' . pdfname, {'err_cb': 'LilyVimCompileErrorCB'})
+  " TODO: check success?
   return j  " TODO
 endfunction
 
