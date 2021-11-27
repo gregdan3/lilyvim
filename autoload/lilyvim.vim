@@ -66,7 +66,7 @@ endfunction
 function! s:StartPreview()
   let pdfname = s:GetPDFName(GetCurBufName())
   if !filereadable(pdfname)
-    echomsg 'PDF ' . pdfname . ' is not readable. Preview failed.'
+    echoerr 'PDF ' . pdfname . ' is not readable. Preview failed.'
     return
   endif
   let j = job_start('zathura ' . pdfname, {'err_cb': 'LilyVimCompileErrorCB'})
