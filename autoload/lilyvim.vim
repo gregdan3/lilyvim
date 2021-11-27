@@ -1,4 +1,4 @@
-" lilyvim - render Lilypond as you write
+" lilyvim - render LilyPond as you write
 " Maintainer:   Gregory Danielson III <https://gregdan3.github.io/>
 " Version:      0.1.0
 " Repository:   https://github.com/gregdan3/lilyvim
@@ -31,13 +31,13 @@ function! s:GetPDFName(fname)
 endfunction
 
 function! s:CompilePDF(fname)
-  " compile lilypond file as pdf
+  " compile LilyPond file as pdf
   let j = job_start('lilypond --pdf ' . a:fname, {'err_cb': 'LilyVimCompileErrorCB'})
   return j
 endfunction
 
 function! s:Compile()
-  " compile current Lilypond buffer
+  " compile current LilyPond buffer
   " TODO: settings? other output formats?
   let bufname = GetCurBufName()
   let j = s:CompilePDF(bufname)
