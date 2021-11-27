@@ -1,18 +1,18 @@
 # lilyvim
-A vim plugin for live rendering Lilypond buffers into ~~the PDF reader of your
+A vim plugin for live rendering LilyPond buffers into ~~the PDF reader of your
 choice~~ the Zathura PDF reader.
 
 ## Use
 #### Commands
-- `:LilyVimCompile`: Compile the current Lilypond buffer.
+- `:LilyVimCompile`: Compile the current LilyPond buffer.
 - `:LilyVimStartPreview`: Open a Zathura instance for the PDF file
-  corresponding to your current Lilypond buffer.
-- `:LilyVimToggleCompilation`: Enable and disable compiling the open Lilypond
+  corresponding to your current LilyPond buffer.
+- `:LilyVimToggleCompilation`: Enable and disable compiling the open LilyPond
   buffer on write.
 
 #### Settings
 Set the following variables in your `.vimrc` to automatically enable `lilyvim`'s
-features when you open a lilypond buffer.
+features when you open a LilyPond buffer.
 ```
 let g:lilyvim_autocompile = 1
 let g:lilyvim_autopreview = 1
