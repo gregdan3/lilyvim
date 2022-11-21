@@ -3,6 +3,8 @@
 A vim plugin for live rendering LilyPond buffers into ~~the PDF reader of your
 choice~~ the Zathura PDF reader.
 
+I switched from using Vim to Neovim shortly after writing this project, so I haven't made any updates to it since. As far as I'm aware, it's the only Lilypond previewer that exists; That said, check out [vim-lilypond-suite](https://github.com/martineausimon/vim-lilypond-suite) and [nvim-lilypond-suite](https://github.com/martineausimon/nvim-lilypond-suite).
+
 ## Installation
 
 Get [junegunn's vim-plug](https://github.com/junegunn/vim-plug), then add the following line to your `.vimrc`:
@@ -10,6 +12,8 @@ Get [junegunn's vim-plug](https://github.com/junegunn/vim-plug), then add the fo
 ```vim
    Plug 'gregdan3/lilyvim'
 ```
+
+Full setup:
 
 ```vim
 call plug#begin()
